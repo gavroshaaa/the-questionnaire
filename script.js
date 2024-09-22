@@ -18,6 +18,7 @@ function sendForm() {
     setTimeout(() => {
         giff.hidden = true;
         div.classList.remove('sendForm');
+        div.textContent = '';
     }, 5000)
 }
 
@@ -38,7 +39,7 @@ form.addEventListener("submit", (event) => {
                 "secondName": secondName.value,
                 "phone": userPhone.value,
                 "email": userEmail.value,
-                "agree": checkbox.checked = true,
+                "agree": checkbox.checked,
             }),
         })
         .then((result) => {
